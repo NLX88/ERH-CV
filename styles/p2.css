@@ -1,0 +1,11 @@
+.powerbi-embed {
+  padding: 60px 20px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.powerbi-embed h2 {
+  font-size: 2rem;
+  color: #3F7F8C;
+  margin-bottom: 20px;
+}
