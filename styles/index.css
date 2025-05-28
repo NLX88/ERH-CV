@@ -11,9 +11,12 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
   color: #000000;
   background-color: #FFFFFF;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .sobre-mi-container {
@@ -183,6 +186,11 @@ body {
   justify-content: center;
   text-align: center;
   transition: backdrop-filter 0.4s ease, background-color 0.4s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .proyecto-preview:hover .proyecto-overlay {
@@ -249,18 +257,17 @@ body {
   text-decoration: none;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 
 .boton-proyecto:hover {
   background-color: #3F7F8C;
 }
 
-.proyecto-info span {
-  display: block;
-  font-size: 1.1rem;
-  margin-top: 10px;
-  color: #61BAA3;
-}
 
 /*Efecto desvanecimiento*/
 .fade-in {
@@ -277,18 +284,71 @@ body {
 
 /*DEJAR AL FINAL*/
 @media (max-width: 768px) {
+    .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar-title {
+    font-size: 1rem;
+  }
+    
   .sobre-mi {
     flex-direction: column;
+    height: auto;
   }
 
   .info-personal, .foto {
     width: 100%;
-    padding: 40px;
+    padding: 30px 20px;
     text-align: center;
   }
 
   .foto img {
-    max-width: 200px;
+    max-width: 180px;
   }
+
+  .proyecto-preview {
+    height: auto;
+  }
+
+  .proyecto-overlay {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .proyecto-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .proyecto-info span {
+    font-size: 1rem;
+  }
+
+  .boton-proyecto {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .proyecto-botones {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .powerbi-embed iframe {
+    height: 400px;
+  }
+
+  .skills ul {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
 }
 
