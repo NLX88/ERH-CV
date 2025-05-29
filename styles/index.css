@@ -4,6 +4,11 @@
   transition: transform 0.3s ease;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
 .proyecto:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -17,6 +22,26 @@ body {
   background-color: #FFFFFF;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+.boton-cv {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  margin-right: 20px; 
+  white-space: nowrap;
+}
+
+.boton-cv:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
 .sobre-mi-container {
@@ -54,6 +79,9 @@ body {
   justify-content: space-between;
   background: transparent;
   z-index: 1000;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
 }
 
 .navbar-title {
@@ -62,12 +90,20 @@ body {
   color: #000;
 }
 
+.navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+}
+
+
 /* SECCIÓN SOBRE MÍ DIVIDIDA */
 .sobre-mi {
   display: flex;
   height: auto; /* permite que crezca con contenido */
   padding-bottom: 80px; /* espacio adicional al final */
   flex-wrap: wrap;
+  margin-top: 90px;
 }
 
 .info-personal {
@@ -285,15 +321,26 @@ body {
 /*DEJAR AL FINAL*/
 @media (max-width: 768px) {
     .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 15px 20px;
   }
 
   .navbar-title {
     font-size: 1rem;
   }
-    
+  
+  .navbar-right {
+    padding: 0;
+    margin: -11px;
+    width: auto;
+  }
+
+  .boton-cv {
+    margin: 0 15px 0 0;
+  }
+
   .sobre-mi {
     flex-direction: column;
     height: auto;
